@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Creating docker builder env"
-tg2sip_builder=$(docker run -v `pwd`:/src -d  -w /src hectorvent/tg2sip-builder:buster tail -f /dev/null)
+tg2sip_builder=$(docker run -v `pwd`:/src -d  -w /src hectorvent/tg2sip-builder:latest tail -f /dev/null)
 
 execute(){
     docker exec $tg2sip_builder $@
